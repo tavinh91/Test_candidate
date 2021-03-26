@@ -11,6 +11,10 @@
   margin: 20px auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +34,10 @@
   position: absolute;
   bottom: 0;
   font-size: 14px;
+  width: 215px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .img {
@@ -51,7 +59,7 @@
 
 .fullscreen-image {
   width: 210px;
-  height: 130px;
+  height: 150px;
 }
 
 .fullscreen-btn {
@@ -85,6 +93,10 @@
 
   .fullscreen-image {
     width: 150px;
-    height: 130px;
+    height: 150px;
+  }
+
+  .id{
+    width: 150px;
   }
 }

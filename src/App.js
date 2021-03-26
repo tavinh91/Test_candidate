@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import GifPlayer from "react-gif-player";
-import { Image,ImageGroup } from "react-fullscreen-image";
+import { Image, ImageGroup } from "react-fullscreen-image";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -23,45 +23,30 @@ const App = () => {
   return (
     <div className="App">
       <div className="container ">
+        <h1 className="text-center">Ghiphy Trending</h1>
         <div className="row">
           {items.slice(0, visible).map((item) => (
             <div className="card col-sm-6">
               <ImageGroup>
-                <Image className="img"
-                    src={item.images["480w_still"].url}
-                    alt="loading..."
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "cover",
-                    }}>
-                  {/* <GifPlayer
-                    className="img"
-                    gif={item.images.downsized.url}
-                    alt="loading..."
-                    playing={false}
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "cover",
-                    }}
-                  /> */}
-                </Image>
+                <Image
+                  className="img"
+                  src={item.images["480w_still"].url}
+                  alt="loading..."
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    height: "100%",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                ></Image>
               </ImageGroup>
               <div className="id">
                 <span>{item.title}</span>
               </div>
-              {console.log(item)}
             </div>
           ))}
         </div>
